@@ -1,0 +1,62 @@
+web-scraper-poc/
+│
+├───scraper/                        # Main scraping logic
+│   ├───__init__.py                 # Makes scraper a Python package
+│   ├───scraper.py                  # Web scraping functions
+│   └───download.py                 # Logic for downloading images and saving them locally
+│
+├───storage/                        # Local storage for scraped data (images and metadata)
+│   └───images/                     # Folder to store downloaded images
+│
+├───ocr/                            # OCR processing logic
+│   ├───__init__.py                 # Makes ocr a Python package
+│   └───ocr_processing.py           # Code for processing images with OCR
+│
+├───data/                           # Metadata storage (could use SQLite or CSV)
+│   └───metadata.db                 # SQLite database file for storing image URLs, OCR text, etc.
+│
+├───tests/                          # Unit and functional tests for the project
+│   ├───__init__.py                 # Makes tests a Python package
+│   └───test_scraper.py             # Test cases for the web scraper
+│
+├───utils/                          # Utility functions (e.g., helper functions)
+│   ├───__init__.py                 # Makes utils a Python package
+│   └───helpers.py                  # Helper functions like logging, common utilities
+│
+├───config/                         # Configuration files
+│   └───config.yaml                 # Configuration file for the scraper (e.g., URLs, frequency)
+│
+├───app.py                          # Main entry point to run the scraper
+├───requirements.txt                # List of project dependencies (e.g., requests, beautifulsoup4, pytesseract)
+└───README.md                       # Documentation of the project
+
+
+
+
+Explanation of the Project Tree:
+scraper/: Contains the main web scraping logic.
+
+scraper.py: This is where we define the core scraping functionality to extract images from web pages.
+download.py: Handles the logic for downloading images and saving them to the local storage/images/ directory.
+storage/: The folder where downloaded images will be saved. This ensures the project is self-contained and keeps data organized.
+
+ocr/: Contains code to handle Optical Character Recognition (OCR) for text extraction from images.
+
+ocr_processing.py: Responsible for applying OCR to images and extracting text (using pytesseract or any other library).
+data/: Storage for metadata (image URLs, timestamps, OCR text, etc.).
+
+metadata.db: An SQLite database file to store structured data. We could alternatively use a CSV file if preferred.
+tests/: A folder to house unit tests.
+
+test_scraper.py: Test cases to verify the scraping functionality. This ensures code quality and helps maintain the project as it scales.
+utils/: Contains utility/helper functions.
+
+helpers.py: General helper functions like logging, error handling, and other common utilities that will be reused across the project.
+config/: Contains configuration files for the scraper.
+
+config.yaml: This file contains parameters such as the list of target websites, scraping intervals, and other adjustable settings.
+app.py: The main entry point for the application. This file will bring together the scraper, downloader, OCR processing, and metadata storage.
+
+requirements.txt: This file lists all the dependencies required to run the project (e.g., beautifulsoup4, requests, pytesseract).
+
+README.md: The documentation file that describes how to set up and run the PoC.
