@@ -1,0 +1,11 @@
+API Key: ZsC3gzP6kQTF4i4UZeYmRVWeO
+
+API Key Secret: uinClLAxh05Vt0BslWvFMLcTOxgmhV4ZJLb8vyFyeQoGIS8ssL
+
+Bearer Token: AAAAAAAAAAAAAAAAAAAAAFcwwgEAAAAApAx4CSi79B52LPzJV6kgUcVrGLo%3DraLPd80veSUE2eUewA2Qv22SgzqdA03sxqYy2hveXqxjmebxVE
+
+Access Token: 1848742146536349696-jBQkpFlVxkIw62LjVvcdBVqiyuEisD
+
+Access Token Secret: yFRerHl0xBy76kZydfv38y2vAKXB4R4lImw4qwEuCo6dp
+
+

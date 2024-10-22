@@ -37,6 +37,27 @@ def scrape_images_from_page(url):
     except Exception as e:
         print(f"Error scraping {url}: {e}")
         return []
+def filter_id_documents(image_urls):
+    """
+    Filter image URLs that likely contain identity documents.
+    
+    Args:
+        image_urls (list): List of image URLs to filter.
+        
+    Returns:
+        list: Filtered image URLs that likely contain IDs.
+    """
+    keywords = ['passport', 'id', 'license', 'identification', 'card']
+    
+    filtered_urls = [
+        img_url for img_url in image_urls if any(keyword in img_url.lower() for keyword in keywords)
+    ]
+    return filtered_urls
+
+# Usage in the main function
+    image_urls = scrape_images_from_page(url)
+    filtered_image_urls = filter_id_documents(image_urls)
+    download_images(filtered_image_urls, config['storage']['images_dir'])
 
 # Example usage for testing
 if __name__ == "__main__":

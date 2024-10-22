@@ -2,3 +2,5 @@ beautifulsoup4
 requests
 pytesseract
 Pillow
+tweepy==4.13.0
+python-dotenv
